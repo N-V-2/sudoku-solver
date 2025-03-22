@@ -1,0 +1,11 @@
+[package]
+name = "solve" 
+
+[lib]
+name = "solve"
+path = "src/lib.rs" 
+
+[[test]]
+name = "algorithm_x_tests"
+path = "tests/test_algorithm_x.rs"
+
