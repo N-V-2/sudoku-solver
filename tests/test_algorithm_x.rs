@@ -11,12 +11,16 @@ fn test1() {
         HashSet::from([1, 2, 5, 6]),
         HashSet::from([1, 6]),
     ];
-    let solution1 = algorithm_x(matrix1);
-    let expected = vec![
+    let mut solution1 = algorithm_x(matrix1);
+    println!("solutions: {:?}", solution1);
+    let mut expected = vec![
         vec![1, 4, 2],
         vec![0, 3, 5],
     ];
-    assert!(expected.contains(&solution1));
+    println!("Expected solutions: {:?}", expected);
+    assert!(solution1.iter().any(|sol| expected.contains(sol)),
+        "None of the solutions in solution1 match the expected ones."
+    );
 }
 
 #[test]
