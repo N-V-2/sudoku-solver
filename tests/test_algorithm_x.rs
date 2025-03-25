@@ -62,7 +62,7 @@ fn test4() {
         HashSet::from([2, 3, 6, 7]),
         HashSet::from([2, 7]),
     ];
-    let mut solution4 = algorithm_x(matrix4);
+    let solution4 = algorithm_x(matrix4);
     println!("Solutions: {:?}", solution4);
     assert!(solution4.is_empty());
 }
