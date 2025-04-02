@@ -8,6 +8,15 @@ name = "solve"
 path = "src/lib.rs" 
 
 [[test]]
-name = "algorithm_x_tests"
-path = "tests/test_algorithm_x.rs"
+name = "parallel_algorithm_x_tests"
+path = "tests/test_parallel_algorithm_x.rs"
 
+[[test]]
+name = "sequential_algorithm_x_tests"
+path = "tests/test_sequential_algorithm_x.rs"
+
+[dev-dependencies]
+criterion = { version = "0.4", features = ["html_reports"] }
+
+[dependencies]
+rayon = "1.5"

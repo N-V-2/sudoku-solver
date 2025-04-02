@@ -104,7 +104,6 @@ fn sudoku_2solution() {
 
     let (matrix, mapping) = sudoku_to_exact_cover(puzzle);
     
-    // Sequential Solution
     println!("\nSequential Solutions:");
     let seq_start = Instant::now();
     let seq_solutions = sequential(matrix.clone());
@@ -116,7 +115,6 @@ fn sudoku_2solution() {
         print_solution(sol, &mapping);
     }
     
-    // Parallel Solution
     println!("\nParallel Solutions:");
     let par_start = Instant::now();
     let par_solutions = parallel(matrix.clone());
@@ -142,16 +140,13 @@ fn sudoku_2solution() {
 fn sudoku_4solution() {
     let puzzle = [
       [0, 0, 5, 7, 4, 3, 8, 6, 1],
-      // Pair 2: row2, columns 8–9 (originally [2,7]) have been blanked.
       [4, 3, 1, 8, 6, 5, 9, 0, 0],
       [8, 7, 6, 1, 9, 2, 5, 4, 3],
       [3, 8, 7, 4, 5, 9, 2, 1, 6],
       [6, 1, 2, 3, 8, 7, 4, 9, 5],
       [5, 4, 9, 2, 1, 6, 7, 3, 8],
       [7, 6, 3, 5, 2, 4, 1, 8, 9],
-      // Pair 1 continued: row8, columns 1–2 (originally [9,2]) have been blanked.
       [0, 0, 8, 6, 7, 1, 3, 5, 4],
-      // Pair 2 continued: row9, columns 8–9 (originally [7,2]) have been blanked.
       [1, 5, 4, 9, 3, 8, 6, 0, 0],
     ];
 
@@ -160,7 +155,6 @@ fn sudoku_4solution() {
 
     let (matrix, mapping) = sudoku_to_exact_cover(puzzle);
     
-    // Sequential Solution
     println!("\nSequential Solutions:");
     let seq_start = Instant::now();
     let seq_solutions = sequential(matrix.clone());
@@ -172,7 +166,6 @@ fn sudoku_4solution() {
         print_solution(sol, &mapping);
     }
     
-    // Parallel Solution
     println!("\nParallel Solutions:");
     let par_start = Instant::now();
     let par_solutions = parallel(matrix.clone());
@@ -213,7 +206,6 @@ fn weird_sudoku() {
 
     let (matrix, mapping) = sudoku_to_exact_cover(puzzle);
     
-    // Sequential Solution
     println!("\nSequential Solutions:");
     let seq_start = Instant::now();
     let seq_solutions = sequential(matrix.clone());
@@ -225,7 +217,6 @@ fn weird_sudoku() {
         print_solution(sol, &mapping);
     }
     
-    // Parallel Solution
     println!("\nParallel Solutions:");
     let par_start = Instant::now();
     let par_solutions = parallel(matrix.clone());
@@ -237,7 +228,6 @@ fn weird_sudoku() {
         print_solution(sol, &mapping);
     }
     
-    // Print timing comparison without asserting equality
     println!("\nPerformance Summary:");
     println!("Sequential time: {:?} ({} solutions)", seq_time, seq_solutions.len());
     println!("Parallel time:   {:?} ({} solutions)", par_time, par_solutions.len());
@@ -266,7 +256,6 @@ fn sudoku_easy() {
 
     let (matrix, mapping) = sudoku_to_exact_cover(puzzle);
     
-    // Sequential Solution
     println!("\nSequential Solutions:");
     let seq_start = Instant::now();
     let seq_solutions = sequential(matrix.clone());
@@ -278,7 +267,6 @@ fn sudoku_easy() {
         print_solution(sol, &mapping);
     }
     
-    // Parallel Solution
     println!("\nParallel Solutions:");
     let par_start = Instant::now();
     let par_solutions = parallel(matrix.clone());
@@ -290,7 +278,6 @@ fn sudoku_easy() {
         print_solution(sol, &mapping);
     }
     
-    // Print timing comparison without asserting equality
     println!("\nPerformance Summary:");
     println!("Sequential time: {:?} ({} solutions)", seq_time, seq_solutions.len());
     println!("Parallel time:   {:?} ({} solutions)", par_time, par_solutions.len());
@@ -318,7 +305,6 @@ fn sudoku_expert() {
 
     let (matrix, mapping) = sudoku_to_exact_cover(puzzle);
     
-    // Sequential Solution
     println!("\nSequential Solutions:");
     let seq_start = Instant::now();
     let seq_solutions = sequential(matrix.clone());
@@ -330,7 +316,6 @@ fn sudoku_expert() {
         print_solution(sol, &mapping);
     }
     
-    // Parallel Solution
     println!("\nParallel Solutions:");
     let par_start = Instant::now();
     let par_solutions = parallel(matrix.clone());
@@ -342,7 +327,6 @@ fn sudoku_expert() {
         print_solution(sol, &mapping);
     }
     
-    // Print timing comparison without asserting equality
     println!("\nPerformance Summary:");
     println!("Sequential time: {:?} ({} solutions)", seq_time, seq_solutions.len());
     println!("Parallel time:   {:?} ({} solutions)", par_time, par_solutions.len());
@@ -371,7 +355,6 @@ fn sudoku_master() {
 
     let (matrix, mapping) = sudoku_to_exact_cover(puzzle);
     
-    // Sequential Solution
     println!("\nSequential Solutions:");
     let seq_start = Instant::now();
     let seq_solutions = sequential(matrix.clone());
@@ -383,7 +366,6 @@ fn sudoku_master() {
         print_solution(sol, &mapping);
     }
     
-    // Parallel Solution
     println!("\nParallel Solutions:");
     let par_start = Instant::now();
     let par_solutions = parallel(matrix.clone());
@@ -395,7 +377,6 @@ fn sudoku_master() {
         print_solution(sol, &mapping);
     }
     
-    // Print timing comparison without asserting equality
     println!("\nPerformance Summary:");
     println!("Sequential time: {:?} ({} solutions)", seq_time, seq_solutions.len());
     println!("Parallel time:   {:?} ({} solutions)", par_time, par_solutions.len());
