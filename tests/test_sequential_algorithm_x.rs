@@ -78,7 +78,7 @@ fn test_multiple_solutions() {
         [4, 3, 1, 8, 6, 5, 9, 0, 0],
         [8, 7, 6, 1, 9, 2, 5, 4, 3],
         [3, 8, 7, 4, 5, 9, 2, 1, 6],
-        [6, 1, 2, 3, 8, 7, 4, 9, 5],  // Just one fixed number
+        [6, 1, 2, 3, 8, 7, 4, 9, 5],  
         [5, 4, 9, 2, 1, 6, 7, 3, 8],
         [7, 6, 3, 5, 2, 4, 1, 8, 9],
         [9, 2, 8, 6, 7, 1, 3, 5, 4],
@@ -97,6 +97,7 @@ fn test_multiple_solutions() {
         assert!(is_valid_sudoku(&grid));
     }
 }
+
 
 pub fn is_valid_sudoku(grid: &[[u8; 9]; 9]) -> bool {
     // Check rows
