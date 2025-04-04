@@ -1,6 +1,6 @@
 # Sudoku Solver Implementation with Algorithm X
 
-##Overvieew
+##Overview##
 This repository contains Rust implementations of a Sudoku solver using Algorithm X (https://en.wikipedia.org/wiki/Knuth%27s_Algorithm_X),the backtracking algorithm introduced by Donald Knuth to solve an exact cover problem for multiple solutions, both in sequential and parallel versions to explore performance improvements in solving NP-complete problems.
 
 **Features**
